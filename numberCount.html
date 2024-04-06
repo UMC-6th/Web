@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <h2 id="number">0</h2>
+
+    <button id="increase">+1</button>
+    <button id="decrease">-1</button>
+    
+    
+<script>
+    const increase = document.getElementById("increase");
+    const decrease = document.getElementById("decrease");
+   
+
+    increase.onclick = function () { 
+	    console.log('increse가 입력됨'); }
+
+    decrease.onclick = function (){ 
+	    console.log('decrese가 입력됨'); }
+
+    const num = document.getElementById("number");
+    let ans  = num.innerText;
+    
+    increase.onclick = function(){
+        ans = parseInt(ans)+1;
+        num.innerText = ans;
+    }
+    decrease.onclick = function(){
+        ans = parseInt(ans)-1;
+        num.innerText = ans;
+    }
+</script>
+
+</body>
+</html>
