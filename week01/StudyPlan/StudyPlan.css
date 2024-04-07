@@ -1,0 +1,86 @@
+body{
+    background-color: #b9d3f0;   
+}
+.title{
+    text-align: center;
+    display: block;
+}
+hr{
+    width: 100%;
+    border: 2px dashed #ffffff;
+
+}
+
+.box{
+    
+    margin: auto;
+    margin-top: 50px;
+    display: block;
+    
+    width: 80%;
+    height: 100%;  
+
+}
+.input{
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+input{
+    width: 80%;
+    opacity: 80%;
+    background-color: #eaf5ff;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.todo{
+    height: 50px; 
+    width: 30%;
+    margin-left: 10%;
+}
+.clear{
+    height: 50px; 
+    width: 30%;
+    margin-right: 10%;
+}
+.list{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+span{
+    /*중간에 위치*/
+    
+    width: 100%;
+    font-weight: bold;
+    padding-bottom: 5px;  
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+p{
+    font-weight: bold;
+    padding-bottom: 10px;
+    /*글씨 색*/
+    color: #4f4f4f;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    text-align: left;
+}
+button{
+    
+    float: right;
+
+    background-color: #d9deff;
+    padding: 5px 0px 23px 0px;
+    border: none;
+    width: 60px;
+    height: 0px;
+    border-radius: 5px;
+    
+    margin-right: 10px;
+}
+
