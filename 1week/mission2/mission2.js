@@ -30,3 +30,5 @@ work.addEventListener('keyup', (e) => {
         });
     }
 });
+
+/*ex*/
