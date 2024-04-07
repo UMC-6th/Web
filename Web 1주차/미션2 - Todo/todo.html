@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./todo.css" />
+</head>
+<body>
+    <h1>UMC Study Plan</h1>
+    <hr id="hr_big">
+    <input type="text" id="todo_input" onkeyup="enterkey()">
+
+    <div class="todoText">
+        <div class="todoBox">
+            <h4>해야 할 일</h4>
+            <hr id="hr_small">
+            
+            <!-- Todo 해야할 일 -->
+            <div class="oneTodo">
+                <div class="spanTodo">
+                    <!-- <h4 id="text_todo_left">HTML</h4>
+                    <button id="todo_complete">완료</button> -->
+                </div>
+                <!-- <hr class="hr_middle"> -->
+            </div>
+        </div>
+        <div class="todoBox">
+            <h4>해낸 일</h4>
+            <hr id="hr_small">
+
+            <!-- Todo 해낸 일 -->
+            <div class="oneTodo">
+                <div class="spanTodo">
+                    <!-- <h4 id="text_todo_rigft">HTML</h4>
+                    <button id="todo_delete">삭제</button> -->
+                </div>
+                <!-- <hr class="hr_middle"> -->
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./todo.js"></script>
+</html>

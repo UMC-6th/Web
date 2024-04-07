@@ -1,0 +1,34 @@
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5); /* 반투명한 페이지가 생기도록 만듦 */
+}
+
+.modalContent {
+    top: 50%; /* 화면 가운데에 위치 */
+    width: 300px;
+    height: 140px;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modalButton {
+    margin-left: auto; /* 우측에 고정하기 위해 */
+    padding-top: 10px;
+}
