@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="misssion1.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="wrap">
+                <h1>회원가입</h1>
+                <div class="line"></div>
+                <div class="input-wrap">
+                    <label for="name">이름</label><br>
+                    <input id="name" required>
+                    <p id="nametext"></p>
+                    
+                </div>
+
+                <div class="input-wrap">
+                    <label for="email">이메일</label><br>
+                    <input id="email" required>
+                    <p id="emailtext"></p>
+                </div>
+
+                <div class="input-wrap">
+                    <label for="age">나이</label><br>
+                    <input id="age" required>
+                    <p id="agetext"></p>
+                </div>
+
+                <div class="input-wrap">
+                    <label for="password">비밀번호</label><br>
+                    <input type="password" id="password" required>
+                    <p id="passwordtext"></p>
+                </div>
+
+                <div class="input-wrap">
+                    <label for="passwordCheck">비밀번호 확인</label><br>
+                    <input type="password" id="passwordCheck">
+                    <p id="checktext"></p>
+                </div>
+                <button onclick="checkInput()" id="confirm">가입하기</button>
+            </div>
+        </div>
+    </section>
+    <script src="mission1.js"></script>
+
+</body>
+
+</html>
