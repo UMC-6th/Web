@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Week1 - Modal(index)</title>
+    <link rel="stylesheet" href="./web1-2.css" /> <!-- CSS 명시 -->
+</head>
+<body>
+    <h1>안녕하세요!</h1>
+    <p>내용내용내용</p>
+    <button id="btn_open_modal">버튼 열기</button>
+    
+    <div class="modal">
+        <div class="modalContent">
+            <div class="modalText">
+                <h3>안녕하세요</h3>
+                <p>모달 내용은 어쩌고 저쩌고..</p>
+            </div>
+            <div class="modalButton">
+                <button id="btn_close_modal">닫기</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const modal = document.querySelector('.modal');
+    const btnOpenModal = document.getElementById("btn_open_modal");
+    const btnCloseModal = document.getElementById("btn_close_modal");
+
+    // modal 클래스 밑에 있는 클래스들을 한 번에 classList로 끄고 키는 코드
+    btnOpenModal.addEventListener("click", ()=>{
+        modal.classList.remove('hidden');
+    });
+    btnCloseModal.addEventListener("click", ()=>{
+        modal.classList.add('hidden');
+    });
+</script>
+</html>

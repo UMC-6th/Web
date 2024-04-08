@@ -1,0 +1,45 @@
+<!-- 회원가입 validation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="./signup.css" />
+</head>
+<body>
+    <form class="signupBox">
+        <h2>회원가입</h2>
+        <hr>
+        <div class="inputBox">
+            <p class="inputContent">이름</p>
+            <input type="text" id="name">
+            <p class="alertMessage" id="name_alert"></p>
+            <p class="inputContent">이메일</p>
+            <input type="text" id="email">
+            <p class="alertMessage" id="email_alert"></p>
+            <p class="inputContent">나이</p>
+            <input type="number" id="age">
+            <p class="alertMessage" id="age_alert"></p>
+            <p class="inputContent">비밀번호</p>
+            <input type="password" id="pw">
+            <p class="alertMessage" id="pw_alert"></p>
+            <p class="inputContent">비밀번호 확인</p>
+            <input type="password" id="pw2">
+            <p class="alertMessage" id="pw2_alert"></p>
+        </div>
+        <button id="btn_signup">가입하기</button>
+    </form>
+
+    <div class="modalBox hidden">
+        <div class="modalContent">
+            <h3>가입 성공!</h3>
+            <p>UMC 챌린저 가입을 축하합니다!!</p>
+            <div class="modalButton">
+                <button id="btnCloseModal">닫기</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./signup.js"></script>
+</html>
