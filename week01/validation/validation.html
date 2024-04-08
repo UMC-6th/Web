@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../validation/validation.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="box-text">
+            <h2>회원가입</h2>
+            <hr>
+            <div>
+                <label for="text">이름</label>
+                <input type="text" id="name" required>
+                <span id="name-error" class="error"></span>
+            </div>
+
+            <div>
+                <label for="text">이메일</label>
+                <input type="email" id="email">
+                <span id="email-error" class="error"></span>
+            </div>
+            <div>
+                <label for="text">나이</label>
+                <input type="number" id="age">
+                <span id="age-error" class="error"></span>
+            </div>
+            <div>
+                <label for="text">비밀번호</label>
+                <input type="password" id="password">
+                <span id="password-error" class="error"></span>
+            </div>
+            <div>
+                <label for="text">비밀번호 확인</label>
+                <input type="password" id="password-confirm">
+                <span id="password-confirm-error" class="error"></span>
+            </div>
+
+            <button class="btn" id="submit" type="submit">가입하기</button>
+
+
+        </div>
+
+    </div>
+    <!-- 모달창 -->
+    <div class="modal-wrap" style="display: none;">
+        <div class="modal">
+            <div class="modalcontent">
+
+                <h2>
+                    UMC
+                </h2>
+                <p>회원가입이 완료되었습니다.</p>
+                    <button id="close">닫기</button>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <script src="../validation/validation.js"></script>
+</body>
+
+</html>
