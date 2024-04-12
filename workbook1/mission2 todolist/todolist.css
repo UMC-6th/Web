@@ -1,0 +1,59 @@
+
+body {
+    background-color:#ecf0f6;
+}
+
+#planform {
+    text-align: center;
+}
+#plan{
+    border: 2px solid;
+    height: 20px;
+}
+
+input::placeholder{
+    color:#d0d5dd;
+    font-size: 10px;
+    font-style: italic;
+}
+
+#title {
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #d4d7dd;
+    text-underline-offset : 4px;
+    text-align: center;
+}
+
+.content {
+    width: 80%;
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-between;
+}
+
+#todo-div, #complete-div {
+    width: 50%;
+    text-align: center;
+}
+
+#todo {
+    margin: auto;
+    width: 180px;
+    border-bottom: 3px solid rgb(206, 220, 241);
+    padding: 10px;
+}
+
+button {
+    background-color: rgb(206, 220, 241);
+    border-radius: 4px;
+    border: none;
+}
+
+span{
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+    font-weight: bold;
+}
