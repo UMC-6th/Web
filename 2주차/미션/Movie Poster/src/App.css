@@ -1,0 +1,32 @@
+body{
+  background-color: rgb(34, 38, 76);
+  height: 0px;
+  margin: 0 auto;
+}
+
+#root {
+  max-width: 1280px;
+  margin: auto;
+  padding: auto;
+}
+
+.mapitem {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto; /* 높이 자동으로 설정 */
+  gap : 20px;
+  width : 300px;
+  height: 20px;
+}
+
+.movie-item{
+  position: relative;
+  z-index: 1;
+}
+
+.story-item{
+  position: relative;
+  z-index: 2;
+}
+
+

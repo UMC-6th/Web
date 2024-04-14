@@ -1,9 +1,8 @@
 :root {
   --bg-color: #F1F3F8;
-  --line-color:#D6E0F0;
-  --font:'Raleway';
+  --line-color: #D6E0F0;
+  --font: 'Raleway';
 }
-
 
 body {
   margin: 0;
@@ -11,7 +10,6 @@ body {
   background-color: var(--bg-color);
   font-family: var(--font);
 }
-
 
 .mainTitle {
   display: flex;
@@ -24,7 +22,6 @@ body {
   border-bottom: 1px solid var(--line-color);
 }
 
-
 .addToDo {
   display: flex;
   justify-content: center;
@@ -32,14 +29,15 @@ body {
   margin-bottom: 48px;
   width: 100%;
 }
+
 .addToDoInfo {
   width: 70%;
   line-height: normal;
   padding: 4px;
-
   height: 36px;
   font-size: 15px;
 }
+
 .addToDoInfo::placeholder {
   font-style: oblique;
   font-family: var(--font);
@@ -47,41 +45,52 @@ body {
   margin: 2px;
 }
 
-
 .list {
   display: flex;
   justify-content: space-around;
   width: 100%;
   margin: 0 auto;
 }
-.list .activeToDo, .list .doneToDo {
+
+.listActive,
+.listDone {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50%;
 }
-.list .activeTitle, .list .doneTitle {
+
+/*줄 달기 */
+.list .listActive .listh2, .list .listDone .listh2 {
   padding: 6px;
   font-weight: bold;
   border-bottom: 4px solid var(--line-color);
 }
 
 
+.listActive .activeTitle,
+.listDone .doneTitle {
+  padding: 6px;
+  font-weight: bold;
+  border-bottom: 4px solid var(--line-color);
+}
 
 .list ul {
-  padding:0;
+  padding: 0;
   font-weight: bold;
   margin: 24px;
 }
+
 .list li {
   display: flex;
   justify-content: space-between;
   text-align: center;
   width: auto;
-  margin:8px;
+  margin: 8px;
   padding: 6px;
   border-bottom: 2px solid var(--line-color);
 }
+
 .list button {
   border: none;
   background-color: var(--line-color);
