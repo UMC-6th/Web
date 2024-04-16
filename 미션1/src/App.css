@@ -1,0 +1,145 @@
+body {
+  background-color: lightgray;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px auto;
+}
+
+hr {
+  width: 70%;
+  height: 2px;
+  border: none;
+  background-color: white;
+}
+
+
+.list {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.todoListBox {
+  font-size: large;
+  font-weight: bold;
+}
+
+.doneListBox {
+  font-size: large;
+  font-weight: bold;
+
+}
+
+.CompleteBtn{
+  position: fixed;
+  left: 30%;
+  color: white;
+  background-color: gray;
+  border-radius: center;
+  text-align: center;
+  border: none;
+
+
+
+}
+
+.deleteBtn{
+  position: fixed;
+  right: 20%;
+  text-align: center;
+  color: white;
+  background-color: gray;
+  border-radius: center;
+  border: none;
+
+ 
+  
+}
+
+.activeTitle{
+  display: inline-block;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  left: 30%;
+
+}
+
+
+.doneTitle{
+  display: inline-block;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  position: fixed;
+  right: 30%;
+}
+
+.account {
+  width: 400px;
+  height: 30px;
+  text-align: center;
+  margin-left:30%;
+
+
+}
+
+.deleteList{
+  position: fixed;
+  top: 35%;
+  right: 30%;
+  margin-top: 5%;
+  padding: 6px;
+  justify-content: space-between;
+
+}
+
+.todoList{
+  position: fixed;
+  left: 10%;
+  top:35%;
+  margin-top: 5%;
+  justify-content: space-between;
+  padding: 6px;
+
+}
+
+.todoList li{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: auto;
+  margin:8px;
+  padding: 6px;
+  border-bottom: 1px solid black;
+}
+.deleteList li{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: auto;
+  margin:8px;
+  padding: 6px;
+
+  border-bottom: 1px solid black;
+}
+  
+.list {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+.todoListBox {
+  font-size: large;
+  font-weight: bold;
+}
+
+.doneListBox {
+  font-size: large;
+  font-weight: bold;
+}
+
+
+
