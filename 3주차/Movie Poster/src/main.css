@@ -1,0 +1,111 @@
+@import 'reset.css';
+
+.root-wrap {
+    position: relative;
+    top : 0;
+    bottom : 0;
+    width : 108%;
+}
+
+
+.header-container {
+    background-color: rgba(3, 37, 65, 1);
+}
+
+
+.header-wrap {
+    
+    height : 64px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+}
+
+.header-left-wrap {
+    display: flex;
+    position: relative;
+    margin-right: 15px;
+    padding : 8px;
+}
+
+
+.header-left-wrap ul {
+    display: flex;
+    position: relative;
+}
+
+.header-left-wrap ul div {
+    display: flex;
+   position: relative;
+    padding : 0 px;
+    margin-left : 850px;
+    
+}
+
+.header-nav-item {
+    
+    color : white;
+    text-decoration : none;
+    font-weight:600;
+    padding: 10px;
+    
+}
+
+.header-nav-item:hover {
+    font-size: 1.4em;
+}
+
+.header-nav-item-1 {
+    
+    color : white;
+    text-decoration : none;
+    font-weight:600;
+    margin : 10px;
+}
+
+
+/*footer 디자인*/
+
+.footer-container {
+    display: flex;
+    position: relative;
+    margin-top : 136.5%;
+    background-color: rgba(3, 37, 65, 1);
+}
+
+.footer-wrap {
+    display: flex;
+    position: relative;
+    height : 64px;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.footer-left-wrap {
+    display: flex;
+    position: relative;
+    margin-right: 15px;
+    padding : 8px;
+}
+
+.footer-left-wrap div {
+    display: flex;
+   position: relative;
+    padding : 0 px;
+    margin-left : 850px;
+    
+}
+
+.footer-nav-item {
+    display: flex;
+    position: relative;
+    color : white;
+    text-decoration : none;
+    font-weight:600;
+    
+}
