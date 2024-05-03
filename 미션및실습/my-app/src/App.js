@@ -1,8 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from './Pages/Home';
-import Movie from './Pages/Movie';
 import Popular from './Pages/Popular';
 import NowPlaying from './Pages/NowPlaying';
 import TopRated from './Pages/TopRated';
