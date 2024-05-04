@@ -1,13 +1,27 @@
 
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { useState } from 'react';
 
 function NavBar() {
+  const [isLogIn, setIsLogIn] = useState(false);
+
+  const clickLogin =()=> {
+    setIsLogIn(true);
+  }
+  const clickLogout =()=> {
+    setIsLogIn(false);
+  }
+
   return (
     <Wrap>
       <Link className='navmenu' to={'/popular'}><Menu>UMC Movie</Menu></Link>
       <Pages>
-        <Link className='navmenu' to={'/'}><Menu>로그인</Menu></Link>
+        {isLogIn? (
+          <Link className='navmenu' onClick={clickLogout}><Menu>로그아웃</Menu></Link>
+        ) : (
+          <Link className='navmenu' onClick={clickLogin}><Menu>로그인</Menu></Link>
+        )}
         <Link className='navmenu' to={'/popular'}><Menu>Popular</Menu></Link>
         <Link className='navmenu' to={'/nowplaying'}><Menu>Now Playing</Menu></Link>
         <Link className='navmenu' to={'/toprated'}><Menu>Top Rated</Menu></Link>

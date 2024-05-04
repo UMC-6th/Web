@@ -6,6 +6,8 @@ import Popular from './pages/popular';
 import TopRated from './pages/toprated';
 import Upcoming from './pages/upcoming';
 import Main from './pages/main';
+import NotFound from './pages/notfound';
+import MovieDetail from './pages/moviedetail';
 
 import Footer from './components/footer';
 import NavBar from './components/navbar';
@@ -23,6 +25,8 @@ function App() {
                 <Route path='/nowplaying' element={<NowPlaying />}/>
                 <Route path='/toprated' element={<TopRated />}/>
                 <Route path='/upcoming' element={<Upcoming />}/>
+                <Route path='/*' element={<NotFound />}/>
+                <Route path='/movie/:originalName' element={<MovieDetail />} />
               </Routes>
             </Container>
 

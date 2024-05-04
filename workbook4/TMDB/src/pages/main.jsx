@@ -1,6 +1,7 @@
 
 import styled from "styled-components";
 import Banner from "../components/banner";
+
 function Main() {
   return (
     <div className="welcome">
@@ -23,7 +24,7 @@ function Main() {
 
 const Welcome = styled.div`
   width: 100vw; 
-  height: 251px;
+  height: 35vh;
   background-color: black;
   display: flex;
   justify-content : center;
@@ -31,7 +32,7 @@ const Welcome = styled.div`
 `;
 const Search = styled.div`
   width: 100vw;
-  min-height: 390.5px;
+  min-height: 55vh;
   display: flex;
   justify-content : center;
   align-items: center;
