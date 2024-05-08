@@ -7,7 +7,7 @@ import Fetch from "../components/fetch";
 import { useState } from "react";
 
 function Main() {
-  const [query, setQuery] = useState(''); // 사용자 입력을 관리하는 상태입니다.
+  const [query, setQuery] = useState('');
   const [url, setUrl] = useState('');
 
   const handleSubmit = (e) => {
