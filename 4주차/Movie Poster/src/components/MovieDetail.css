@@ -1,0 +1,32 @@
+.MovieDetail-container{
+    align-items: center;
+    position: relative;
+    font-size: 20px;
+    color: white;
+    margin : 100px;
+
+}
+
+.MovieDetail-item-1 {
+    position: relative;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    font-size: 20px;
+    color: white;
+    
+}
+
+.MovieDetail-item {
+    position: absolute;
+    display: grid;
+    margin-left : 50px;
+    width : 800px;
+    height : 100px;
+}
+
+.MovieDetail-item-2 {
+    margin : 20px;
+    font-size : 30px;
+    line-height: 1.5;
+    
+}
