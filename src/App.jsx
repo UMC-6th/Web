@@ -9,6 +9,8 @@ import TopRatedPage from '../src/pages/TopRatedPage';
 import UpComing from '../src/pages/UpComing';
 import NotFoundPage from '../src/pages/NotFoundPage';
 import MovieDetailPage from '../src/pages/MovieDetailPage';
+import Joinpage from '../src/pages/Join';
+import Loginpage from '../src/pages/LoginPage'
 
 function App() {
 
@@ -25,6 +27,8 @@ function App() {
           <Route path='/up-coming-page' element={<UpComing/>}/>
           <Route path='/movie/:originalTitle' element={<MovieDetailPage/>}/>
           <Route path='/*' element={<NotFoundPage/>}/>
+          <Route path='/join-page' element={<Joinpage/>}/>
+          <Route path='/login-page' element={<Loginpage/>}/>
         </Routes>
       </Container>
 
@@ -43,6 +47,7 @@ const Container = styled.div`
   overflow-y: scroll;
   margin: 0;
   align-items: center;
+  
 `;
 
 export default App;

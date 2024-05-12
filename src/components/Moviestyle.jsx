@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 const MovieBox = styled.div`
-    width: 250px;
+    width: 280px;
     height: 350px;
     position: absolute;
     display: flex;

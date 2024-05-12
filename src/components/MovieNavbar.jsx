@@ -20,7 +20,7 @@ const Navbar = styled.div`
 const MainText = styled.p`
     margin: 0px;
     color: white;
-    padding-left: 20px;
+    padding-left: 50px;
     font-size: 22px;
 `;
 
@@ -29,7 +29,7 @@ const MenuBox = styled.div`
     flex-direction: row;
     display: flex;
     justify-content: end;
-    padding-right: 20px;
+    padding-right: 70px;
 `;
 
 const LoginText = styled.p`
@@ -70,10 +70,10 @@ function MovieNavbar() {
 
     return (
         <Navbar>
-            <Link to="/popular-page"><MainText>UMC Movie</MainText></Link>
+            <Link to="/main-page"><MainText>UMC Movie</MainText></Link>
             <MenuBox>
-                <Link to="/main-page"><LoginText onClick={handleLoginClick}>{isLoggedIn ? '로그아웃' : '로그인'}</LoginText></Link>
-                <Link to="/main-page"><MenuText>회원가입</MenuText></Link>
+                <Link to="/login-page"><LoginText onClick={handleLoginClick}>{isLoggedIn ? '로그아웃' : '로그인'}</LoginText></Link>
+                <Link to="/join-page"><MenuText>회원가입</MenuText></Link>
                 <Link to="/popular-page"><MenuText>Popular</MenuText></Link>
                 <Link to="/now-playing-page"><MenuText>Now Playing</MenuText></Link>
                 <Link to="/top-rated-page"><MenuText>Top Rated</MenuText></Link>

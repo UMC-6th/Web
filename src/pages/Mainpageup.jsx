@@ -6,6 +6,7 @@ function Mainpageup() {
     );
 }
 
+
 const WelcomeContainer = styled.div`
     width: 100%;
     height: 20vh;

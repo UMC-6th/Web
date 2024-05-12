@@ -84,15 +84,15 @@ const MovieContainer = styled.div`
     flex-wrap: wrap;
     justify-content: start;
     padding-top: 10px;
-    padding-left: 10px;
+    padding-left: 50px;
     gap: 10px;
-    overflow-y: scroll;
     min-height: 100vh;
     margin: 0px;
+    
 `;
 
 const MovieItem = styled.div`
-    flex-basis: calc(12% - 30px);
+    flex-basis: calc(12% - 3px);
     display: flex;
     height: 332px;
     position: relative;
