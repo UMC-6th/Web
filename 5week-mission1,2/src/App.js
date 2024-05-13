@@ -15,10 +15,8 @@ import MovieDetailComponent from "./MovieDetailComponent";
 
 
 function App() {
-
   function handleLoginClick() {
     const login = document.querySelector(".Login");
-
     if (login) {
       if (login.innerHTML === "로그인") {
         login.innerHTML = "로그아웃";
@@ -27,6 +25,8 @@ function App() {
       }
     }
   }
+
+  
   return (
     <div className="App">
 
