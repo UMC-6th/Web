@@ -7,11 +7,11 @@ import Fetch from "../components/fetch";
 import { useState } from "react";
 
 function Main() {
-  const [query, setQuery] = useState(''); // 사용자 입력을 관리하는 상태입니다.
+  const [query, setQuery] = useState('');
   const [url, setUrl] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // 폼 제출 시 페이지 리로드 방지
+    e.preventDefault(); // 폼 제출 -> 페이지 리로드 방지
     const encodedQuery = encodeURIComponent(query);
     const searchUrl = `https://api.themoviedb.org/3/search/movie?query=${encodedQuery}&include_adult=false&language=ko-KR&page=1`;
     setUrl(searchUrl);
