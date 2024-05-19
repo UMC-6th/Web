@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-import MovieComponent from '../components/MovieComponent';
-import MovieDetailComponent from '../components/MovieDetailComponent';
+import MovieComponent from './MovieComponent';
+import MovieDetailComponent from './MovieDetailComponent';
 import Spinner from '../src/assets/Spinner.gif';
 
 // eslint-disable-next-line react/prop-types

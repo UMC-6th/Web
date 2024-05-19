@@ -1,12 +1,12 @@
 // MainPage.jsx
 
 import styled from 'styled-components';
-import BannerComponent from '../components/MainPage/BannerComponent';
+import Banner from '../components/BannerComponent';
 
 function MainPage() {
     return(
         <Wrap>
-            <BannerComponent/>
+            <Banner/>
 
             <SearchContainer>
                 <SearchText>영화를 검색하세요.</SearchText>

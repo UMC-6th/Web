@@ -13,7 +13,6 @@ const MovieBox = styled.div`
     flex-direction: column;
     background-color: black;
     margin: 10px;
-    border-radius: 10px;
     padding: 10px;
 
 `;
@@ -24,7 +23,7 @@ const Image = styled.img`
     object-fit: cover;
 `;
 
-const BottomBox = styled.div`
+const Box = styled.div`
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -43,7 +42,7 @@ const TextBox = styled.div`
     color: white;
 `;
 
-const PaddingBox = styled.div`
+const Padding = styled.div`
     width: 10px;
     display: flex;
 `;
@@ -53,14 +52,14 @@ function MovieComponent({image, title, voteAverage}) {
     return (
         <MovieBox>
             <Image src={image} alt={title} />
-            <BottomBox>
-                <PaddingBox />
+            <Box>
+                <Padding />
                 <TextBox>
                     <p id='movieBox__bottomBox__textBox__title'>{title}</p>
                     <p id='movieBox__bottomBox__textBox__vote_average'>★{Number(voteAverage).toFixed(1)}</p>
                 </TextBox>
-                <PaddingBox />
-            </BottomBox>
+                <Padding />
+            </Box>
         </MovieBox>
     );
 }
