@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 function Mainpageup() {
     return(
-        <WelcomeContainer>환영합니다 </WelcomeContainer>
+        <WelcomeContainer>환영합니다 (debounce 검색 기능 개선 전) </WelcomeContainer>
     );
 }
 

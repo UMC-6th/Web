@@ -42,6 +42,9 @@ function MovieMainPage() {
         searchMovies();
     };
 
+   
+    
+
     return (
         <Wrapper>
             <BannerComponent />
@@ -61,6 +64,7 @@ function MovieMainPage() {
                         <MovieItem key={id} className="movieContainer__movieItem">
                             {Moviestyle}
                         </MovieItem>
+                        
                     ))}
                 
                 </SearchMovieContainer>
