@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 function Mainpageup() {
     return(
+<<<<<<< HEAD
         <WelcomeContainer>환영합니다(debounce 검색기능 개선) </WelcomeContainer>
+=======
+        <WelcomeContainer>환영합니다 (debounce 검색 기능 개선 전) </WelcomeContainer>
+>>>>>>> a68e1c9a1b57c9ce7bdd8df9b8bb7be8864a3375
     );
 }
 
