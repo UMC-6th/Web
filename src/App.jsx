@@ -25,7 +25,7 @@ function App() {
           <Route path='/popular-page' element={<PopularPage/>}/>
           <Route path='/top-rated-page' element={<TopRatedPage/>}/>
           <Route path='/up-coming-page' element={<UpComing/>}/>
-          <Route path='/movie/:originalTitle' element={<MovieDetailPage/>}/>
+          <Route path='/movie/:id' element={<MovieDetailPage/>}/>
           <Route path='/*' element={<NotFoundPage/>}/>
           <Route path='/join-page' element={<Joinpage/>}/>
           <Route path='/login-page' element={<Loginpage/>}/>
