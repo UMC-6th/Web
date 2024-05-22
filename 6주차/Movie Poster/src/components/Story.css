@@ -1,0 +1,47 @@
+
+#storybody{
+    display: grid;
+   
+    align-items: left;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    width : 300px;
+    height: 530px;
+    background-color: rgba(0, 0, 0 ,0.5);
+    color: white;
+}
+
+
+
+#storybody {
+    opacity: 0; 
+
+  }
+  
+#storybody:hover {
+    opacity: 1; 
+  }
+
+.storycontents div p{
+    margin:20px;
+    padding:10px;
+    width : 250px;
+    height: 530px;
+    font-size: 15px;
+    color:white;
+
+}
+
+.storycontents div h2{
+    margin-bottom:0px;
+    margin-top: 20px;
+    font-size: 15px;
+    margin-left : 20px;
+    padding-bottom:0px;
+    color:white;
+    
+}
+
+.story-deco:hover {
+  text-decoration: none;
+}

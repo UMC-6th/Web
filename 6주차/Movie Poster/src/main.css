@@ -1,0 +1,109 @@
+@import 'reset.css';
+
+.root-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%; /* width 값을 108%에서 100%로 수정 */
+}
+
+.header-container {
+    width: 100%;
+    background-color: rgba(3, 37, 65, 1);
+}
+
+.header-wrap {
+
+    height: 64px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.header-left-wrap {
+    display: flex;
+    position: relative;
+    margin-right: 15px;
+    padding: 8px;
+}
+
+.header-left-wrap ul {
+    display: flex;
+    position: relative;
+}
+
+.header-left-wrap ul div {
+    display: flex;
+    position: relative;
+    padding: 0;
+    margin-left: 850px;
+}
+
+.header-nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.header-nav-item:hover {
+    font-size: 1.4em;
+}
+
+.header-nav-item-1 {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.header-nav-item-2 {
+    color: rgb(248, 234, 32);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.loggedin-color {
+    color: rgb(248, 234, 32);
+}
+
+.active-link {
+    color: rgb(248, 234, 32);
+}
+
+/* footer 디자인 */
+.footer-container {
+    background-color: rgba(3, 37, 65, 1);
+    color: white;
+    padding: 20px 0; /* Footer 내부 패딩 추가 */
+    width: 100%;
+    position: fixed; /* 고정 위치 설정 */
+    bottom: 0; /* 페이지 하단에 위치 */
+    left: 0; /* 페이지 왼쪽에 위치 */
+}
+
+.footer-wrap {
+    margin: 0 auto;
+    max-width: 1200px; /* Footer 폭 제한 */
+    display: flex;
+    justify-content: center; /* 중앙 정렬 추가 */
+    align-items: center; /* 중앙 정렬 추가 */
+    z-index: 0;
+}
+
+.footer-left-wrap {
+    margin-right: 15px;
+    padding: 8px;
+    text-align: center;
+}
+
+.footer-nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-nav-item:hover {
+    color: rgb(248, 234, 32); /* Hover 시 색상 변경 */
+}
