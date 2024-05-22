@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
 import Moviestyle from '../components/Moviestyle';
 import MovieDetailComponents from './MovieDetailComponents';
 import SpinnerComponent from './SpinnerImg';

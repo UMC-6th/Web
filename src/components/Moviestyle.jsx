@@ -9,19 +9,23 @@ const MovieBox = styled.div`
     justify-content: space-between;
     flex-direction: column;
     background-color: black;
+    background-color: rgb(31,21,54);
 `;
 
 const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px;
+    
 `;
 
 const BottomBox = styled.div`
     display: flex;
     width: 100%;
     flex-direction: row;
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(11,11,24);
+    
 `;
 
 const TextBox = styled.div`
@@ -31,7 +35,7 @@ const TextBox = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
-    font-size: 11px;
+    font-size: 15px;
     font-weight: bold;
     color: white;
 `;

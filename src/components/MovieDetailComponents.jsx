@@ -1,9 +1,10 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
-// Styled components
 const MovieDetailBox = styled.div`
-    width: 200px;
+    width: 280px;
     height: 350px;
     position: relative;
     display: flex;
@@ -26,18 +27,38 @@ const Overview = styled.p`
     height: 270px;
     font-size: 13px;
     overflow: auto;
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background: yellow;
+    }
     word-break: break-all;
     white-space: normal;
-    
 `;
 
-// MovieDetailComponent
-function MovieDetailComponents({id, title, overview, originalTitle}) {
+function MovieDetailComponents({ id, title, overview, originalTitle }) {
     const navigate = useNavigate();
+    const [movieDetail, setMovieDetail] = useState(null);
+
+    useEffect(() => {
+        const fetchMovieDetail = async () => {
+            try {
+                const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=d81db69360007704f1d39205b9305389`);
+                setMovieDetail(response.data);
+            } catch (error) {
+                console.error('Error fetching movie detail:', error);
+            }
+        };
+
+        fetchMovieDetail();
+    }, [id]);
 
     const handleClick = () => {
-        navigate(`/movie/${encodeURIComponent(originalTitle)}`, { state: {id:id} });
-    }
+        navigate(`/movie/${id}`, { state: { id: id } });
+
+    };
 
     return (
         <MovieDetailBox onClick={handleClick}>
