@@ -1,0 +1,89 @@
+/**화면색*/
+body{
+    background-color: #b9d3f0;  
+}
+.title{
+    text-align: center;
+    display: block;
+}
+hr{
+    width: 100%;
+    border: 2px dashed #ffffff;
+
+}
+
+.box{
+    background-color: #b9d3f0;  
+    margin: auto;
+    margin-top: 0px;
+    display: block;
+    
+    width: 200%;
+    height: 100%;  
+
+}
+.input{
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+input{
+    width: 80%;
+    opacity: 80%;
+    background-color: #eaf5ff;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.todo{
+    height: 50px; 
+    width: 30%;
+    margin-left: 10%;
+}
+.clear{
+    height: 50px; 
+    width: 30%;
+    margin-right: 10%;
+}
+.list{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+span{
+    /*중간에 위치*/
+    
+    width: 100%;
+    font-weight: bold;
+    padding-bottom: 5px;  
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+p{
+    font-weight: bold;
+    padding-bottom: 10px;
+    /*글씨 색*/
+    color: #4f4f4f;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    text-align: left;
+}
+button {
+    float: right;
+    margin-right: 10px;
+    margin-top: -55px;
+    background-color: #d9deff;
+    border: none;
+    
+    width: 75px;
+    height: 30px; 
+    border-radius: 5px;
+
+    line-height: 10px; 
+    text-align: center;
+}
+
+

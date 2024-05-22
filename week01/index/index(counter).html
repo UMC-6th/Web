@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+    
+    <h2 id="number" >0</h2>
+    <button id="increase">+1</button>
+    <button id="decrease">-1</button>
+    
+    <script>
+        //DOM선택하기
+        var number= document.getElementById('number');
+        var increaseButton = document.getElementById('increase');
+        var decreaseButton = document.getElementById('decrease');
+
+        console.log(number);
+        console.log(increaseButton);
+        console.log(decreaseButton);
+        //버튼클릭 이벤트 설정하기
+        increaseButton.addEventListener('click', function(){
+            console.log('increase가 클릭됨');
+            var current = parseInt(number.innerText, 10);
+            number.innerText = current + 1;
+        });
+        decreaseButton.addEventListener('click', function(){
+            console.log('decrease가 클릭됨');
+            var current = parseInt(number.innerText, 10);
+            number.innerText = current - 1;
+        });
+
+        
+
+    </script>
+</body>
+
+</html>
