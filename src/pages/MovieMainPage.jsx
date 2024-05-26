@@ -74,6 +74,9 @@ const MovieMainPage = () => {
         searchMovies();
     };
 
+   
+    
+
     return (
         <Wrapper>
             <BannerComponent />
@@ -89,6 +92,10 @@ const MovieMainPage = () => {
                     <SearchButton onClick={handleSearchButtonClick}>🔎</SearchButton>
                 </SearchInputBox>
                 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 32a08888769aac4d853cea1489be2aece2ac9722
                 {isLoading ? (<LoadingText>로딩 중...</LoadingText>):(
                     <SearchMovieContainer>
                         {movieData.map(({ id, Moviestyle , movieDetailComponents}) => (
@@ -101,6 +108,19 @@ const MovieMainPage = () => {
                         ))}
                     </SearchMovieContainer>
                 )}
+<<<<<<< HEAD
+=======
+=======
+                    {movieData.map(({ id, Moviestyle }) => (
+                        <MovieItem key={id} className="movieContainer__movieItem">
+                            {Moviestyle}
+                        </MovieItem>
+                        
+                    ))}
+                
+                </SearchMovieContainer>
+>>>>>>> a68e1c9a1b57c9ce7bdd8df9b8bb7be8864a3375
+>>>>>>> 32a08888769aac4d853cea1489be2aece2ac9722
                 
             </SearchContainer>
         </Wrapper>
