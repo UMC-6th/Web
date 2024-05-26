@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import React from 'react';
 
 function Mainpageup() {
     return(
-        <WelcomeContainer>환영합니다 </WelcomeContainer>
+        <WelcomeContainer> 환영합니다 </WelcomeContainer>
     );
 }
 
@@ -10,7 +11,7 @@ function Mainpageup() {
 const WelcomeContainer = styled.div`
     width: 100%;
     height: 20vh;
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(31,21,54);
     margin: 0;
     color: white;
     font-size: 40px;

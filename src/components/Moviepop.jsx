@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
 import Moviestyle from '../components/Moviestyle';
 import MovieDetailComponents from './MovieDetailComponents';
 import SpinnerComponent from './SpinnerImg';
 
-function Moviepop({address}) {
+function Moviepop({ address }) {
     const [movieData, setMovieData] = useState([]);
-    const [spinner, setSpinner] = useState(true); // spinner 상태 추가
+    const [spinner, setSpinner] = useState(true);
+    const [currentPage, setCurrentPage] = useState(1);
+    const moviesPerPage = 20;
 
-    // fetch
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(address, {
+                const response = await fetch(`${address}&page=${currentPage}&per_page=${moviesPerPage}`, {
                     method: 'GET',
                     headers: {
                         accept: 'application/json',
@@ -24,53 +24,73 @@ function Moviepop({address}) {
                     throw new Error('Error : Not OK :(');
                 }
                 const data = await response.json();
-                const movies = data.results;
-                console.log('Number of movies:', movies.length); // 영화 개수 출력
-
-                const newMovieData = movies.map(movie => ({
-                    id: movie.id,
-                    Moviestyle: (
-                        <Moviestyle
-                            key={movie.id}
-                            image={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                            title={movie.title}
-                            voteAverage={movie.vote_average}
-                        />
-                    ),
-                    movieDetailComponents: (
-                        <MovieDetailComponents
-                            key={movie.id}
-                            title={movie.title}
-                            overview={movie.overview}
-                            originalTitle={movie.original_title} // originalTitle 값 추가
-                            id={movie.id}
-                        />
-                    )
-                }));
-                setMovieData(newMovieData);
-                setSpinner(false); // 데이터 로딩이 완료된 후 spinner 상태 변경
+                setMovieData(data.results);
+                setSpinner(false);
             } catch (error) {
                 console.error('Error:', error);
             }
         };
         fetchData();
-    }, []);
+    }, [address, currentPage,moviesPerPage]);
+
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+        setSpinner(true);
+    };
+
+    const handleNextPage = () => {
+        setCurrentPage((prevPage) => prevPage + 1);
+        setSpinner(true);
+    };
+
+    const handlePreviousPage = () => {
+        setCurrentPage((prevPage) => prevPage - 1);
+        setSpinner(true);
+    };
 
     return (
         <>
             {spinner ? (
                 <SpinnerComponent />
             ) : (
-                <MovieContainer>
-                    {movieData.map(({ id, Moviestyle, movieDetailComponents }) => (
-                        <MovieItem key={id} className="movieContainer__movieItem">
-                            {Moviestyle}
-                            <MovieDetailWrapper className="movieContainer__movieItem__movieDetailWrapper">
-                                {movieDetailComponents}
-                            </MovieDetailWrapper>
-                        </MovieItem>
-                    ))}
-                </MovieContainer>
+                <>
+                <MovieNext>
+                        <MovieContainer>
+                            {movieData.map((movie) => (
+                                <MovieItem key={movie.id} className="movieContainer__movieItem">
+                                    <Moviestyle
+                                        image={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+                                        title={movie.title}
+                                        voteAverage={movie.vote_average}
+                                    />
+                                    <MovieDetailWrapper className="movieContainer__movieItem__movieDetailWrapper">
+                                        <MovieDetailComponents
+                                            title={movie.title}
+                                            overview={movie.overview}
+                                            originalTitle={movie.original_title}
+                                            id={movie.id}
+                                        />
+                                    </MovieDetailWrapper>
+                                </MovieItem>
+                            ))}
+                        </MovieContainer>
+                        <PaginationWrapper>
+                            <Pagination>
+                                {currentPage > 1 && (
+                                    <PageButton onClick={handlePreviousPage}>
+                                        Previous
+                                    </PageButton>
+                                )}
+                                <PageNumber>{currentPage}</PageNumber>
+                                {movieData.length === moviesPerPage && (
+                                    <PageButton onClick={handleNextPage}>
+                                        Next
+                                    </PageButton>
+                                )}
+                            </Pagination>
+                        </PaginationWrapper>
+                 </MovieNext>
+                </>
             )}
         </>
     );
@@ -88,7 +108,12 @@ const MovieContainer = styled.div`
     gap: 10px;
     min-height: 100vh;
     margin: 0px;
-    
+`;
+
+const MovieNext = styled.div`
+    width: 100%;
+    height: auto;
+    flex-direction: row;
 `;
 
 const MovieItem = styled.div`
@@ -105,6 +130,35 @@ const MovieItem = styled.div`
 
 const MovieDetailWrapper = styled.div`
     display: none;
+`;
+
+const PaginationWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+`;
+
+const Pagination = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
+const PageButton = styled.button`
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(2,15,130);
+    color: #fff;
+    cursor: pointer;
+`;
+
+const PageNumber = styled.span`
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
 `;
 
 export default Moviepop;

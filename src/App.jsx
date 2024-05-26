@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import NavbarComponent from '../src/components/MovieNavbar';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import React, {useState} from 'react';
 
 import MainPage from './pages/MovieMainPage';
 import NowPlayingPage from '../src/pages/NowPlayingPage';
@@ -9,10 +10,16 @@ import TopRatedPage from '../src/pages/TopRatedPage';
 import UpComing from '../src/pages/UpComing';
 import NotFoundPage from '../src/pages/NotFoundPage';
 import MovieDetailPage from '../src/pages/MovieDetailPage';
-import Joinpage from '../src/pages/Join';
+import Join from '../src/pages/Join';
 import Loginpage from '../src/pages/LoginPage'
 
 function App() {
+
+  const [ registeredUser, setRegisteredUser] = useState(null);
+
+  const handleRegister = (userData ) =>{
+    setRegisteredUser(userData);
+  }
 
   return (
     <BrowserRouter>
@@ -25,10 +32,10 @@ function App() {
           <Route path='/popular-page' element={<PopularPage/>}/>
           <Route path='/top-rated-page' element={<TopRatedPage/>}/>
           <Route path='/up-coming-page' element={<UpComing/>}/>
-          <Route path='/movie/:originalTitle' element={<MovieDetailPage/>}/>
+          <Route path='/movie/:id' element={<MovieDetailPage/>}/>
           <Route path='/*' element={<NotFoundPage/>}/>
-          <Route path='/join-page' element={<Joinpage/>}/>
-          <Route path='/login-page' element={<Loginpage/>}/>
+          <Route path='/join-page' element={<Join onRegister={handleRegister}/>}/>
+          <Route path='/login-page' element={<Loginpage registeredUser = {registeredUser}/>}/>
         </Routes>
       </Container>
 

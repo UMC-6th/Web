@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import React, { useState } from 'react';
+import { Link ,useNavigate} from 'react-router-dom';
 
-
-function Join() {
+function Join({onRegister}) {
     
     
     const [formData, setFormData] = useState({
         username: '',
+        idname: '',
         email: '',
         age: '',
         password: '',
@@ -15,11 +16,14 @@ function Join() {
 
     const [formErrors, setFormErrors] = useState({
         username: '',
+        idname: '',
         email: '',
         age: '',
         password: '',
         password2: ''
     });
+
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -135,9 +139,14 @@ function Join() {
         if (!isValid) {
             return;
         }
-        console.log('폼이 제출되었습니다.');
+        
+        console.log('회원가입이 정상적으로 처리되었습니다.');
+        alert('회원가입이 정상적으로 처리되었습니다.');
         console.log(formData);
         // 여기에 폼 제출에 필요한 로직 추가
+
+        onRegister({idname:formData.idname, password: formData.password});
+        navigate('/login-page');
 
         
     };
@@ -159,6 +168,16 @@ function Join() {
                             placeholder="이름을 입력해주세요"
                         />
                         {formErrors.username && <ErrorMessage>{formErrors.username}</ErrorMessage>}
+                    </InputContainer>
+                    <InputContainer>
+                    <Styleinput
+                            type="text"
+                            id="idname"
+                            value={formData.idname}
+                            onChange={handleChange}
+                            placeholder="아이디를 입력해주세요"
+                        />
+                        {formErrors.idname && <ErrorMessage>{formErrors.idname}</ErrorMessage>}
                     </InputContainer>
                     {/* 이메일 입력란과 메시지 */}
                     <InputContainer>
@@ -209,10 +228,27 @@ function Join() {
 
                 
             </form>
-        </Wrapper_join>
+            <Moviehaveitem>
+                <Havelogin>이미 아이디가 있으신가요?</Havelogin>
+                <Link to="/login-page"><Movelogin>로그인 페이지로 이동하기</Movelogin></Link>
+            </Moviehaveitem>
+    </Wrapper_join>
     );
 }
+const Moviehaveitem = styled.div`
+    flex-direction: row;
+    display: flex;
+    padding-top : 40px
+`;
 
+const Havelogin = styled.div`
+    margin-right: 150px;
+    margin-left : 30px;
+`;
+const Movelogin = styled.div`
+    font-size : 18px;
+    color: white;
+`;
 const Wrapper_join = styled.div`
     display: flex;
     flex-direction: column;
