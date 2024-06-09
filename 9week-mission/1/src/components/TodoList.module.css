@@ -1,0 +1,19 @@
+.list {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.todolist {
+    flex-grow: 1;
+}
+
+.deleteBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
