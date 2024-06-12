@@ -1,0 +1,28 @@
+.list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.todolist {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.deleteBtn {
+    padding: 5px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.deleteBtn:hover {
+    background-color: #bd2130;
+}
